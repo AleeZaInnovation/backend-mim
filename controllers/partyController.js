@@ -39,7 +39,7 @@ export const getAparty = catchAsyncError(async (req, res, next) => {
 export const createParty = catchAsyncError(async (req, res, next) => {
     const createdBy = req.user.name
     const { name, mobile, address, category, description, accountType, rate } = req.body;
-    if (!name || !mobile || !address || !rate || !category || !accountType)
+    if (!name || !mobile || !address || !category || !accountType)
         return next(new ErrorHandler("Please add all fields", 400));
     const file = req.file;
     if (file) {
