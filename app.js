@@ -27,14 +27,12 @@ app.use(cors({
 import party from './routes/partyRoutes.js';
 import transaction from './routes/transactionRoutes.js';
 import user from './routes/userRoutes.js';
-import payment from './routes/paymentRoutes.js';
 import other from './routes/otherRoutes.js';
 import { ErrorMiddleware } from "./middlewares/Error.js";
 
 app.use("/api/v1/", party);
 app.use("/api/v1/", transaction);
 app.use("/api/v1/", user);
-app.use("/api/v1/", payment);
 app.use("/api/v1/", other);
 
 export default app;
